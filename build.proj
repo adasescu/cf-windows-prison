@@ -79,7 +79,7 @@
   <!-- Target for running unit tests with code coverage-->
   <Target Name="UnitTest">
     <PropertyGroup>
-      <UnitTestDll>$(LibraryRoot)\src\CloudFoundry.WindowsPrison.Tests\bin\$(Configuration)\CloudFoundry.WindowsPrison.Tests.dll</UnitTestDll>
+      <UnitTestDll>"$(LibraryRoot)\src\CloudFoundry.WindowsPrison.Tests\bin\$(Configuration)\CloudFoundry.WindowsPrison.Tests.dll"</UnitTestDll>
     </PropertyGroup>
 
     <Exec Command="$(VSTestCommand) $(UnitTestDll) /InIsolation /Platform:x64 /settings:CodeCoverage.runsettings /logger:trx" ConsoleToMSBuild="true">
